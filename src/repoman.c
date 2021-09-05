@@ -1,13 +1,34 @@
+#include <repoman.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <sys/stat.h> // mkdir()
+#include <string.h>
 
-int repoman(char usage[], char project[], char lang[]) {
-  if(!usage && !project && !lang) {
-    perror("What the heck - there's nothing here, moron.");
-    exit(EXIT_FAILURE);
+int main(int argc, char *argv[]) {
+
+  if (argc < 2) {
+    printf("No arguments given.\n");
+    return 1;
   }
-  else if(usage[0] == "help") {
-    printf("Welcome to repoman by gnuoveryou. There's not much here yet.");
+
+  const char *arg1 = argv[1];
+
+  if (strcmp(arg1, "version") == 0) {
+    printf("Repoman Version 0.01\n");
+  } else if (strcmp(arg1, "help") == 0) {
+    help();
+  } else if (strcmp(arg1, "create") == 0) {
+    char *project_name = argv[2];
+
+    if (!project_name) {
+      printf("Project name required\n");
+      return 1;
+    }
+
+    create_new_project(project_name);
+
+  } else {
+    printf("Unknown argument %s\n", arg1);
+    return 1;
   }
+
+  return 0;
 }

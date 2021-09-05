@@ -8,12 +8,11 @@ make all
 ## Usage
 ### Syntax
 ```
-./repoman <usage> <project> <lang>
+./repoman {option} {argument}
 ```
-### Options for `usage`
-1. help (kinda)
+
 ## TODO
-- [ ] Help option
-- [ ] Project creation
+- [x] Help option
+- [x] Project creation
 - [ ] Configuration file
 - [ ] Git integration

@@ -1,4 +1,11 @@
 CC = gcc
+CFLAGS = -Isrc/include -o
+CFILES = src/*.c
+
+.PHONY: all
 
 all:
-	$(CC) src/repoman.o -o repoman
+	$(CC) $(CFLAGS) repoman $(CFILES)
+
+clean:
+	rm repoman
