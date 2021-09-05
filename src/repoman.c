@@ -13,8 +13,10 @@ int main(int argc, char *argv[]) {
 
   if (strcmp(arg1, "version") == 0) {
     printf("Repoman Version 0.01\n");
+  } else if (strcmp(arg1, "help") == 0) {
+    help();
   } else if (strcmp(arg1, "create") == 0) {
-    const char *project_name = argv[2];
+    char *project_name = argv[2];
 
     if (!project_name) {
       printf("Project name required\n");
