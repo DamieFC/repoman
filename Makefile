@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Isrc/include -o
-CFILES = src/*.c
+CFILES = $(shell find src/ -name '*.c')
 
 .PHONY: all
 

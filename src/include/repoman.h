@@ -3,5 +3,6 @@
 
 int create_new_project(char name[]);
 int help();
+int git_clone(char repo_url[]);
 
 #endif //_REPOMAN_H

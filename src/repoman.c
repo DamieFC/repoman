@@ -25,6 +25,16 @@ int main(int argc, char *argv[]) {
 
     create_new_project(project_name);
 
+  } else if (strcmp(arg1, "clone") == 0) {
+    char *url = argv[2];
+
+    if (!url) {
+      printf("URL required\n");
+      return 1;
+    }
+
+    git_clone(url);
+
   } else {
     printf("Unknown argument %s\n", arg1);
     return 1;
