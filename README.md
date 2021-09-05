@@ -5,8 +5,9 @@ A punk rock project mangager inspired from [@aa2006](https://github.com/aa2006)'
 ```
 git clone https://github.com/DamieFC/repoman
 make all
-make install // (run as root)
 ```
+If you want to install Repoman run `make install` as root.
+
 ## Usage
 ### Syntax
 ```
