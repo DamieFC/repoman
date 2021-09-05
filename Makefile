@@ -6,6 +6,11 @@ CFILES = src/*.c
 
 all:
 	$(CC) $(CFLAGS) repoman $(CFILES)
+	
+install:
+	@echo "Installing repoman..."
+	@cp ./repoman /usr/bin/repoman
+	@echo "Done!"
 
 clean:
 	rm repoman
