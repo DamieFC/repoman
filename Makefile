@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -o
+CFLAGS = -Isrc/include -o
 CFILES = src/*.c
 
 .PHONY: all

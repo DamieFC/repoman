@@ -1,3 +1,4 @@
+#include <repoman.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -12,6 +13,16 @@ int main(int argc, char *argv[]) {
 
   if (strcmp(arg1, "version") == 0) {
     printf("Repoman Version 0.01\n");
+  } else if (strcmp(arg1, "create") == 0) {
+    const char *project_name = argv[2];
+
+    if (!project_name) {
+      printf("Project name required\n");
+      return 1;
+    }
+
+    create_new_project(project_name);
+
   } else {
     printf("Unknown argument %s\n", arg1);
     return 1;
