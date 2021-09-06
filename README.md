@@ -17,5 +17,5 @@ If you want to install Repoman run `make install` as root.
 ## TODO
 - [x] Help option
 - [x] Project creation
-- [ ] Configuration file
+- [x] Configuration file
 - [x] Git integration
