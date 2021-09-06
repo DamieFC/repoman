@@ -1,4 +1,4 @@
-#include <repoman.h>
+#include <git.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,5 +14,5 @@ int git_clone(char repo_url[]) {
   snprintf(clone_command, sizeof(clone_command), "git clone %s", repo_url);
   system(clone_command);
 
-  printf("Cloned %s\n", repo_url);
+  return 0;
 }
