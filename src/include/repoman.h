@@ -3,5 +3,6 @@
 
 int create_new_project(char name[]);
 int help();
+int create_config_files(char project_name[]);
 
 #endif //_REPOMAN_H

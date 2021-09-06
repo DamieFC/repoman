@@ -24,10 +24,7 @@ int create_new_project(char name[]) {
   snprintf(command, sizeof(command), "mkdir %s", name);
   system(command);
 
-  chdir(name);
-
-  snprintf(command, sizeof(command), "mkdir .repoman");
-  system(command);
+  create_config_files(name);
 
   printf("Created project %s\n", name);
 

@@ -1,3 +1,4 @@
+#include <git.h>
 #include <repoman.h>
 #include <stdio.h>
 #include <string.h>
@@ -5,7 +6,7 @@
 int main(int argc, char *argv[]) {
 
   if (argc < 2) {
-    printf("No arguments given.\n");
+    help();
     return 1;
   }
 
@@ -24,6 +25,22 @@ int main(int argc, char *argv[]) {
     }
 
     create_new_project(project_name);
+
+  } else if (strcmp(arg1, "git-clone") == 0) {
+    char *url = argv[2];
+
+    if (!url) {
+      printf("URL required\n");
+      return 1;
+    }
+
+    git_clone(url);
+
+  } else if (strcmp(arg1, "git-pull") == 0) {
+    git_pull();
+
+  } else if (strcmp(arg1, "git-status") == 0) {
+    git_status();
 
   } else {
     printf("Unknown argument %s\n", arg1);

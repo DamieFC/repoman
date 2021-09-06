@@ -1,10 +1,13 @@
 # Repoman
 A punk rock project mangager inspired from [@aa2006](https://github.com/aa2006)'s [proman](https://github.com/aa2006/proman).
-## Building
+
+## Building and Installing
 ```
 git clone https://github.com/DamieFC/repoman
 make all
 ```
+If you want to install Repoman run `make install` as root.
+
 ## Usage
 ### Syntax
 ```
