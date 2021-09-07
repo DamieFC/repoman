@@ -1,5 +1,5 @@
 # Repoman
-A punk rock project mangager inspired from [@aa2006](https://github.com/aa2006)'s [proman](https://github.com/aa2006/proman).
+A punk rock project manager inspired from [@aa2006](https://github.com/aa2006)'s [proman](https://github.com/aa2006/proman).
 
 ## Building and Installing
 ```
