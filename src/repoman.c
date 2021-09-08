@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
   const char *arg1 = argv[1];
 
   if (strcmp(arg1, "version") == 0) {
-    printf("Repoman Version 0.01\n");
+    printf("Repoman Version 1.0\n");
     return 0;
   } else if (strcmp(arg1, "help") == 0) {
     help();
