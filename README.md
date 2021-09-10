@@ -7,7 +7,7 @@ git clone https://github.com/DamieFC/repoman
 cd repoman
 make all
 ```
-If you want to install Repoman run `make install` as root.
+Run `make install` as root to install Repoman.
 
 ## Usage
 ### Syntax
