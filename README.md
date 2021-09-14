@@ -1,17 +1,18 @@
 # Repoman
-A punk rock project mangager inspired from [@aa2006](https://github.com/aa2006)'s [proman](https://github.com/aa2006/proman).
+A punk rock project manager inspired from [@aa2006](https://github.com/aa2006)'s [proman](https://github.com/aa2006/proman).
 
 ## Building and Installing
 ```
 git clone https://github.com/DamieFC/repoman
+cd repoman
 make all
 ```
-If you want to install Repoman run `make install` as root.
+Run `make install` as root to install Repoman.
 
 ## Usage
 ### Syntax
 ```
-./repoman {option} {argument}
+repoman {option} {argument} 
 ```
 
 ## TODO

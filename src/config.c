@@ -7,25 +7,18 @@
 int create_config_files(char project_name[]) {
   chdir(project_name);
 
-  char command[21];
-
-  snprintf(command, sizeof(command), "mkdir .repoman");
-  system(command);
-
+  system("mkdir .repoman");
   chdir(".repoman");
 
-  snprintf(command, sizeof(command), "touch description");
-  system(command);
-
-  snprintf(command, sizeof(command), "touch project_name");
-  system(command);
+  system("touch description");
+  system("touch project_name");
 
   FILE *project_name_file;
 
   project_name_file = fopen("project_name", "w");
 
   if (project_name_file == NULL) {
-    printf("Cannot open .repoman/description. No such file\n");
+    printf("Cannot open .repoman/project_name. No such file\n");
     return 1;
   }
 
@@ -33,6 +26,14 @@ int create_config_files(char project_name[]) {
   fclose(project_name_file);
 
   printf("Created configuration files\n");
+
+  /* Change directory back to the project directory because
+   * if the user wants to initialize the project as a git repo
+   * `git init` will create the .git directory inside the .repoman
+   * directory.
+   */
+
+  chdir("..");
 
   return 0;
 }
