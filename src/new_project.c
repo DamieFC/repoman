@@ -20,13 +20,13 @@ int create_new_project(char name[]) {
     return 1;
   }
 
-  char command[21];
+  int command_sz = strlen(name) + 7;
+  char command[command_sz];
+
   snprintf(command, sizeof(command), "mkdir %s", name);
   system(command);
 
   create_config_files(name);
-
-  printf("Created project %s\n", name);
 
   char user_input;
 
@@ -40,6 +40,8 @@ int create_new_project(char name[]) {
   } else {
     printf("Unknown option\n");
   }
+
+  printf("Created project %s\n", name);
 
   return 0;
 }
