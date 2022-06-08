@@ -38,7 +38,7 @@ int create_new_project(char name[]) {
   } else if (user_input == 'n') {
     printf("Repository *not* initialized as a git repo\n");
   } else {
-    printf("Unknown option, not intializing this repo as a git repo\n");
+    printf("Unknown option, not initializing this repo as a git repo\n");
   }
 
   printf("Created project %s\n", name);
