@@ -20,17 +20,17 @@ int create_new_project(char name[]) {
     return 1;
   }
 
-  char command[21];
+  int command_sz = strlen(name) + 7;
+  char command[command_sz];
+
   snprintf(command, sizeof(command), "mkdir %s", name);
   system(command);
 
   create_config_files(name);
 
-  printf("Created project %s\n", name);
-
   char user_input;
 
-  printf("Do you want to initialize this project as a git repo? [yn]\n");
+  printf("Do you want to initialize this project as a git repo? [yn]: ");
   scanf(" %c", &user_input);
 
   if (user_input == 'y') {
@@ -38,8 +38,10 @@ int create_new_project(char name[]) {
   } else if (user_input == 'n') {
     printf("Repository *not* initialized as a git repo\n");
   } else {
-    printf("Unknown option\n");
+    printf("Unknown option, not initializing this repo as a git repo\n");
   }
+
+  printf("Created project %s\n", name);
 
   return 0;
 }
